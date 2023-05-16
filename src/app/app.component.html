@@ -1,0 +1,71 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<form class="navform">
+    <ul class="navbar">
+        <li class="label">
+            <a>DRAMATIC</a> </li>
+        <li routerLinkActive="active">
+            <a class="pages" routerLink="/">MOVIES</a> </li>
+        <!--<li routerLinkActive="active" class="pages">
+            <a routerLink="/">TV SHOW</a> </li>-->
+        <!--<li routerLinkActive="active" class="pages">
+            <a routerLink="/">NEW</a> </li>-->
+    </ul>
+    <ul class="navbar">
+        <li routerLinkActive="active">
+            <a class="pages" routerLink="/favorites">FAVORITES</a> </li>
+    </ul>
+
+    <i class="material-icons" style="color: white; margin-top: 5px; margin-left: 550px; font-size: 30px;">&#xe8b1;</i>
+    <i class="material-icons" style="color: white; margin-top: 5px; margin-left: 40px; font-size: 30px;">&#xe7f4;</i>
+    <div routerLinkActive="active">
+        <a routerLink="/login"> <img src="/assets/img/logo.png" class="profile-img" /> </a>
+    </div>
+    <!--<button (click)="logout($event)">LOGOUT</button>-->
+</form>
+
+<router-outlet></router-outlet>
+
+<footer>
+    <select id="language-type" name="languages">
+        <option value="eng">English</option>
+        <option value="ru">Руский</option>
+    </select>
+
+    <div class="contacts">
+        <ul>
+            <li class="main-li">NAVIGATION</li>
+            <li>Home</li>
+            <li>FAQ</li>
+            <li>Investor Relations</li>
+            <li>Jobs</li>
+            <li>About Us</li>
+            <li>Help Center</li>
+        </ul>
+    
+        <ul>
+            <li class="main-li">LEGAL</li>
+            <li>Privacy Policy</li>
+            <li>Terms of Service</li>
+            <li>Cookie Preferences</li>
+            <li>Corporate Information</li>
+        </ul>
+    
+        <ul>
+            <li class="main-li">TALK TO US</li>
+            <li>support@ercom.com</li>
+            <li>+66 2399 1145</li>
+        </ul>
+    
+        <ul>
+            <li class="main-li">FOLLOW US</li>
+            <li>
+                <i class="material-icons" style="color: white;">&#xe8b1;</i>
+                <i class="material-icons" style="color: white;">&#xe7f4;</i>
+                <i class="material-icons" style="color: white;">&#xe7f4;</i>  
+            </li>
+        </ul>
+    </div>
+
+    <!--<div>© 2022 Dramatic. All Rights Reserved.</div>-->
+</footer>

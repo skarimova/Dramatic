@@ -1,0 +1,38 @@
+<div class="film-description-page">
+    <div class="settings">
+        <i class="material-icons" style="color: #BCA5FF; margin-top: 27px; margin-left: 40px; font-size: 35px;">&#xe8b1;</i> <br>
+        <i class="material-icons" style="color: #BCA5FF; margin-top: 19px; margin-left: 40px; font-size: 35px;">&#xe7f4;</i> <br>
+        <i class="material-icons" style="color: #BCA5FF; margin-top: 19px; margin-left: 40px; font-size: 35px;">&#xe8b1;</i> <br>
+        <i class="material-icons" style="color: #BCA5FF; margin-top: 19px; margin-left: 40px; font-size: 35px;">&#xe7f4;</i> <br>
+    </div>
+
+    <div class="description-container">
+        <p class="name">{{film.name}}</p>
+        <p class="description">{{film.description}}</p>
+        <p class="description-type">GENRES</p>
+        <p class="description">{{film.categories}}</p>
+        <button class="watch-btn">WATCH<i class="material-icons" style="position: absolute; color: white; margin-left: 5px; font-size: 25px;">&#xe037;</i></button>
+        <button class="add-btn" (click)="likeFilm(film)">MY LIST<i class="material-icons" style="color: white; margin-left: 10px; font-size: 25px;">&#xe145;</i></button>
+        <br>
+
+        <span class="inline"> <img src="/assets/img/IMDb.jpg" class="imdb"/> </span>
+        <span class="inline"> <p class="rating">{{film.rating}}</p> </span>
+        <span class="inline"> <p class="year">{{film.year}}</p> </span>
+    </div>
+
+    <div class="container">
+        <span class="inline" >
+            <div class="movies-cont-name">TRAILER</div>
+            <!--<video controls width="600px" height="300px"><source [src]="_videoUrl" type="video/mp4"/></video>-->
+            <!--<img src="/assets/img/deadpool.jpg" class="trailer"/>-->
+        </span>
+        <span class="inline" style="margin-left: 100px;">
+            <div class="movies-cont-name">CAST AND CREW INFO</div>
+            <div class="info-container" *ngFor="let member of film.members">
+                <img src="{{member.photo}}" class="actor"/>
+                <div class="actor-name">{{member.fullName}}</div>
+                <div class="actor-role">{{member.position}}</div>
+            </div>
+        </span>
+    </div>
+</div>
