@@ -66,7 +66,7 @@ export class LogicService{
         this.setToken(null)
     }
 
-    isAuthenicated() {
+    isAuthenticated() {
         return !!this.token
     }
  }

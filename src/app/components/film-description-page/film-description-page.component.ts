@@ -10,8 +10,6 @@ import { LogicService } from 'src/app/services/logic.service';
 })
 export class FilmDescriptionPageComponent {
 
-  //loading = true;
-
   constructor(private logicService: LogicService,
     private dataService: DataService){}
 
@@ -23,7 +21,6 @@ export class FilmDescriptionPageComponent {
     if(!filmId) return;
     this.logicService.getFilm(filmId).subscribe(res => {
       this.film=res;
-      //this.loading=false;
     })
   }
 

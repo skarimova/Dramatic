@@ -4,6 +4,7 @@
 body, html {
     height: 100%;
     width: 100%;
+    min-width: 750px;
 }
 body {
     margin: 0;
@@ -15,11 +16,25 @@ body {
 button{
     cursor: pointer;
 }
+.notifications {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 12px;
+}
+
 
 // NAVBAR
 .navform {
     position: absolute;
     width: 100%;
+    min-width: 750px;
     height: 93px;
     top: 0px;
     
@@ -31,7 +46,7 @@ button{
 }
 .navbar li a {
     float: left;
-    margin-left: 35px;
+    margin-left: 2.5vw;
 
     text-decoration: none;
 }
@@ -41,7 +56,7 @@ button{
     font-family: 'Griffy';
     font-style: normal;
     font-weight: 400;
-    font-size: 36px;
+    font-size: 5vmin;
     color: #FFC907;
 }
 .pages {
@@ -50,20 +65,18 @@ button{
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 2.5vmin;
     color: #FFFFFF;
 }
 .profile-img {
-    background-color: white;
-    position: absolute;
-    margin-left: 930px;
-    margin-top: -42px;
-    width: 45px;
-    height: 45px;
+    //position: absolute;
+    margin-top: 7px;
+    margin-left: 4vw;
+    background: white;
+    border-radius: 50%;
 
-    box-sizing: border-box;
-    border: 2px solid #FFFFFF;
-    border-radius: 50px;
+    width: 35px;
+    height: 35px;
 }
 
 // FOOTER
@@ -77,7 +90,7 @@ footer {
 }
 footer ul{
     margin-top: 95px;
-    margin-left: 70px;
+    margin-left: 5vw;
     display:block; 
     float:left;
 }
@@ -87,7 +100,7 @@ footer ul li{
 
     font-family: 'Proxima Nova';
     font-style: normal;
-    font-size: 16px;
+    font-size: 2.5vmin;
     color: #FFFFFF;
     opacity: 0.8;
 }
@@ -96,7 +109,7 @@ select {
     width: 131px;
     height: 34px;
     margin-top: 95px;
-    margin-left: 80px;
+    margin-left: 7vw;
     padding: 5px;
     
     background: #362F33;
@@ -147,11 +160,14 @@ select:focus { outline: none; border: none; }
     backdrop-filter: blur(12.5px);
     border-radius: 24px;
 }
+.search-container {
+    margin-left: 55vw;
+}
 #search {
     position: absolute;
-    width: 324px;
+    width: 25vw;
     height: 37px;
-    margin-left: 750px;
+    //margin-left: 50vw;
     margin-top: -7px;
 
     background: #3B567D;
@@ -168,10 +184,16 @@ select:focus { outline: none; border: none; }
 }
 #search-btn {
     position: absolute;
-    margin-left: 1030px;
+    margin-left: 22vw;
     margin-top: -2px;
     background: none;
     border: none;
+}
+#search-btn i{
+    color: white;
+}
+#search-btn i:hover{
+    font-size: 30px;
 }
 .movies-cont-name {
     margin-left: 20px;
@@ -243,13 +265,21 @@ select:focus { outline: none; border: none; }
     background: none;
     border: none;
 }
+.like-btn i{
+    color: white; 
+    margin-left: 12px;
+}
+.like-btn i:hover {
+    color: pink; 
+}
 
 // LOGIN PAGE
 .login-page {
     padding: 25px;
     margin-top: 200px;
-    margin-left: 450px;
-    margin-right: 450px;
+    width: 350px;
+    margin-left: 35vw;
+    //margin-right: 35vw;
 
     background: rgba(11, 15, 22, 0.47);
     box-shadow: 8px -8px 10px rgba(0, 0, 0, 0.25);
@@ -266,6 +296,17 @@ select:focus { outline: none; border: none; }
     font-size: 18px;
     line-height: 22px;
     color: #FFFFFF;
+}
+.warning {
+    padding-bottom: 10px;
+
+    text-align: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: red;
 }
 .validation {
     font-family: 'Montserrat';
@@ -384,21 +425,21 @@ select:focus { outline: none; border: none; }
     padding-left: 15px;
 }
 .register-btn {
+    padding-right: 20px;
     margin-top: 15px;
-    margin-left: 85px;
     width: 158px;
     height: 50px;
-
+    
     background: #5436A9;
     border-radius: 30px;
     border: none;
-
+    
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
     text-align: center;
-
+    
     color: #FFFFFF;
 }
 
@@ -553,10 +594,10 @@ select:focus { outline: none; border: none; }
     content: '';
     box-sizing: border-box;
     position: absolute;
-    width: 200px;
-    height: 200px;
-    margin-top: 150px;
-    margin-left: 100px;
+    width: 25px;
+    height: 25px;
+    margin-top: -2px;
+    margin-left: 75px;
     border-radius: 50px;
     border: 10px solid #ffffff;
     border-top-color: #232536;

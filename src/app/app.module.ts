@@ -9,6 +9,7 @@ import { RegistrationPageComponent } from './components/registration-page/regist
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { FavoritesPageComponent } from './components/favorites-page/favorites-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NotificationModule } from './components/notification/notification.module';
 
 @NgModule({
   declarations: [
@@ -17,13 +18,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FilmDescriptionPageComponent,
     RegistrationPageComponent,
     LoginPageComponent,
-    FavoritesPageComponent
+    FavoritesPageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NotificationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

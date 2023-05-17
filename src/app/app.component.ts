@@ -10,12 +10,13 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'mcatalog';
 
-  constructor(private logicService: LogicService,
+  constructor(
+    public logicService: LogicService,
     private router: Router) {}
 
   logout($event: any) {
     event?.preventDefault()
     this.logicService.logout()
-    this.router.navigate(['/components', 'login'])
+    this.router.navigate(['login'])
   }
 }

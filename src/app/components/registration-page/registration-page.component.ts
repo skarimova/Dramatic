@@ -9,7 +9,7 @@ import { LogicService } from 'src/app/services/logic.service';
   styleUrls: ['./registration-page.component.scss']
 })
 export class RegistrationPageComponent {
-
+  loading = false;
   form!: FormGroup;
 
   submitted=false;
@@ -28,6 +28,7 @@ export class RegistrationPageComponent {
   }
 
   register(){
+    this.loading = true;
     this.submitted = true;
     if(this.form.invalid){ return }
 
@@ -41,6 +42,7 @@ export class RegistrationPageComponent {
       this.form.reset
       this.router.navigate([''])
       this.submitted = false;
+      this.loading = false;
     })
   }
 
